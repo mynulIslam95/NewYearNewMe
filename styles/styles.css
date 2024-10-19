@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* Main container */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  text-align: right;
+  color: #333;
+}
+
+.text h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 4rem; /* Responsive font size */
+  font-weight: 1000;
+  line-height: 1.2;
+  letter-spacing: 0.03rem;
+  text-align: right;
+}
+
+.text p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1rem;
+  color: #444040b7;
+  margin-top: 15px;
+  text-align: right;
+  letter-spacing: 0.04rem;
+}
+
+/* Button Styling */
+.container .btn {
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: block;
+  width: 120px;
+  height: 45px;
+  background-color: #f5622c;
+  color: aliceblue;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.container .btn:hover {
+  background-color: #fe4400;
+  color: aliceblue;
+}
+
+/* Remove underline from link */
+a {
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    left: 50%;
+    top: 35%;
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  .container .btn {
+    width: 110px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    left: 10%;
+    top: 40%;
+    text-align: left;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .text p {
+    font-size: 0.85rem;
+  }
+
+  .container .btn {
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+/* Second Section Styling */
+.second-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.second-section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.second-section img {
+  width: 40%; /* Adjust image to take up 40% of the width */
+  height: auto;
+  border-radius: 50%;
+}
+
+.failures-content {
+  width: 40%; /* Adjust text content to take up 40% of the width */
+  max-width: 500px;
+  text-align: left;
+}
+
+.failures-h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.failures-paragaraph {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.04rem;
+}
+
+.failures-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.failures-ul ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.failures-ul ul li::before {
+  content: "\2713";
+  color: green;
+  margin-right: 10px;
+}
+
+/* Media Queries for Second Section */
+@media (max-width: 768px) {
+  .second-section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .second-section img {
+    margin-bottom: 2rem;
+  }
+
+  .failures-content {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Third Section Styling */
+.third-section {
+  background-color: #ffffff;
+  padding: 3rem 0; /* Padding for the section */
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensures that the title and grid are aligned properly */
+  font-size: 16px;
+}
+
+.third-section h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2rem; /* You can adjust this based on how big you want the title */
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* Reduced gap between grid items */
+  padding: 0 5%; /* Padding for alignment */
+  height: 50vh; /* Grid takes half of the section height */
+  align-items: center; /* Center grid items vertically */
+  text-align: center;
+}
+
+.plan-item img {
+  width: 100px; /* You can adjust the size if needed */
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.plan-item h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.plan-item p {
+  color: #666;
+}
+
+/* Image Section Styling */
+.image-section {
+  position: relative;
+  margin: 0 auto; /* Center the box */
+  width: 70%; /* Adjust the width to align with the first and last images */
+  height: 35vh;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orange-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+}
+
+.overlay-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-text button {
+  background-color: white;
+  color: #ff5722;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.overlay-text button:hover {
+  background-color: #cdcdcd;
+  color: #ff3d00;
+}
+
+/* Responsive Design for Third Section */
+@media (max-width: 768px) {
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-section {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-section {
+    height: 120px;
+  }
+}
+
+/*Final Section */
+
+.final-section {
+  background-color: #000000; /* Black background */
+  height: 60vh; /* Set the section height */
+  color: #ffffff; /* White text color */
+  display: grid;
+  place-items: center;
+}
+
+.final-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns for left and right boxes */
+  width: 80%; /* Width of the content container */
+  place-items: center;
+}
+
+.contact-info h2,
+.subscribe h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.social-media {
+  margin-top: 1.5rem;
+}
+
+.social-media a {
+  margin-right: 15px;
+}
+
+.subscribe form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subscribe input {
+  background-color: black;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 250px;
+}
+.subscribe input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background-color: #f5622c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe button:hover {
+  background-color: #fe4400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .final-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subscribe form {
+    align-items: center;
+  }
+
+  .subscribe input,
+  .subscribe button {
+    width: 100%;
+  }
+}
